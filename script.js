@@ -4,7 +4,6 @@ let country = ''
 async function getweather() {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${key}&units=metric`)
     const json = await (response.json())
-    console.log(json)
     const description = await json.weather[0].description
     const type = json.weather[0].main
     const humidity = json.main.humidity
@@ -16,6 +15,10 @@ async function getweather() {
     const detaills = [description, type, humidity, feelLike, pressure, temp, maxtemp, mintemp]
     printdeatails(detaills)
 }
+const x = document.querySelector('#country')
+const btn = document.querySelector('button')
+const loader = document.querySelector('.loader')
+
 
 function printdeatails(arr) {
     const type = document.querySelector('.type')
@@ -32,11 +35,16 @@ function printdeatails(arr) {
     mintemp.textContent = arr[7]
     pressure.textContent = arr[4]
 
+    loader.children[0].remove()
+
+
 }
-const x = document.querySelector('#country')
-const btn = document.querySelector('button')
+
 btn.addEventListener('click', () => {
     country = x.value
+    let img = document.createElement('img')
+    img.src = 'autorenew_black_24dp.svg'
+    img.classList.add('image')
+    loader.appendChild(img)
     getweather()
-    // console.log(y.json())
 })
