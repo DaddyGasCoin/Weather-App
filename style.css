@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 20px;
+    height: 100vh;
+}
+
+
+
+.card-container {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 8px;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    font-size: 24px;
+    font-weight: 400;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+.type {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 40px;
+    align-self: center;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 25px;
+    column-gap: 15px;
+    text-transform: capitalize;
+}
+
+.temp,
+.humidity,
+.max,
+.min,
+.pressure {
+    grid-column: 1/2;
+    justify-self: center;
+}
+
+.temp-value,
+.humidity-value,
+.max-value,
+.min-value,
+.pressure-value {
+    grid-column: 2/3;
+    justify-self: center;
+}
+
+.temp-value {
+    grid-row: 1/2;
+}
+
+.humidity-value {
+    grid-row: 2/3;
+}
+
+.max-value {
+    grid-row: 3/4;
+}
+
+.min-value {
+    grid-row: 4/5;
+}
+
+input {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 22px;
+    background-color: #f8fafc;
+    border: 0;
+    border-radius: 4px;
+    width: 300px;
+    height: auto;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: #ffffff;
+
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-radius: 12px;
+    border: solid 2px black;
+}
+
+button:hover,
+input:hover {
+    background-color: #e4e4e7;
+}
