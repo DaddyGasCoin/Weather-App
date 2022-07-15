@@ -89,7 +89,7 @@ input {
     text-transform: capitalize;
     font-size: 22px;
     background-color: #f8fafc;
-    border: 0;
+    border: 2px solid black;
     border-radius: 4px;
     width: 300px;
     height: auto;
@@ -99,11 +99,12 @@ input {
     text-align: center;
 }
 
+
+
 button {
     margin-top: 20px;
     margin-bottom: 60px;
     background-color: #ffffff;
-
     padding: 8px 20px;
     font-size: 20px;
     font-weight: 400;
@@ -116,6 +117,19 @@ button {
 button:hover,
 input:hover {
     background-color: #e4e4e7;
+}
+
+
+.invalid {
+    background-color: #fca5a5;
+
+}
+
+span {
+    margin-top: 2px;
+    text-transform: capitalize;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
 }
 
 .image {
