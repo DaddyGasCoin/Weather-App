@@ -1,1 +1,1 @@
-# Weather-App
+# A Weather-App using open weather API
